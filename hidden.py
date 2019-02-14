@@ -7,5 +7,3 @@ def oauth():
             "consumer_secret": consumer_secret,
             "token_key": token_key,
             "token_secret": token_secret}
-
-oauth()
