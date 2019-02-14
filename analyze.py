@@ -30,9 +30,7 @@ def get_account_name():
 			continue
 
 	try:
-		url = twurl.augment(TWITTER_URL, {'screen_name': acct,
-										  'count': str(quantity)})
-
+		url = twurl.augment(TWITTER_URL, {'screen_name': acct, 'count': str(quantity)})
 		connection = urllib.request.urlopen(url, context=ctx)
 	except BaseException:
 		print('Seems like this account is private ..')
@@ -68,8 +66,7 @@ def user_choosings(js):
 	show_columns = True if user_choice in proved else False
 
 	if show_columns:
-		available_columns = pd.DataFrame(headers,
-										 index=range(1, len(headers) + 1))
+		available_columns = pd.DataFrame(headers, index=range(1, len(headers) + 1))
 		print('Available columns are', available_columns)
 
 	print('Enter "all" if you want to see all of them. Press "Enter" to stop.')
