@@ -33,4 +33,4 @@ It depends on how many friends and columns you've chosen to display:\
 
 ## Warning   :warning:
 This app was tested only in main cases, so some problems may occur.\
-In case of problems, write comments underneath this projects of send a message to me directly: `mishanya@protonmail.com`\
+In case of problems, write comments underneath this projects or send a message to me directly: `mishanya@protonmail.com`
