@@ -8,6 +8,11 @@ from pandas.io.json import json_normalize
 
 
 def get_account_name():
+	"""
+	Gets an username from input and returns JSON file.
+	
+	None -> dict
+	"""
 	acct = input('Enter Twitter Account: ').strip()
 
 	if acct == 'q':
@@ -43,6 +48,11 @@ def get_account_name():
 
 
 def display_content(js):
+	"""
+	Displays JSON structure if user wants it.
+	
+	dict -> None
+	"""
 	proved = {'y', 'yes'}
 	user_input = input('Would you like to see the JSON structure (y/n): ')
 
@@ -58,6 +68,11 @@ def display_content(js):
 
 
 def user_choosings(js):
+	"""
+	Lists all available column names and gets choices from user which of them to show.
+	
+	dict -> list
+	"""
 	data = json_normalize(js['users'])
 	headers = [name for name in sorted(set(data))]
 	proved = {'y', 'yes'}
@@ -89,6 +104,11 @@ def user_choosings(js):
 
 
 def build_panda(user_choice):
+	"""
+	Builds a DataFrame using Pandas based on user's choices.
+	
+	list -> pandas.core.frame.DataFrame
+	"""
 	data = json_normalize(js['users'])
 	columns = [x for x in sorted(set(data))]
 	index=[x['name'] for x in js['users']]
